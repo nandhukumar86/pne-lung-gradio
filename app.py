@@ -6,7 +6,7 @@ from tensorflow.keras.applications.densenet import preprocess_input
 import cv2
 import numpy as np
 
-path = '/model-dn.h5'
+path = 'model-dn.h5'
 model = tensorflow.keras.models.load_model(path)
 
 def detectPneumonia(file):
