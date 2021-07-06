@@ -1,2 +1,4 @@
 gradio
 pydicom
+tensorflow
+cv2
