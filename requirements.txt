@@ -1,4 +1,4 @@
 gradio
 pydicom
 tensorflow
-cv2
+opencv
