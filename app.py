@@ -2,7 +2,6 @@ import gradio as gr
 import pydicom
 import io
 import tensorflow
-from tensorflow.keras.applications.densenet import preprocess_input
 import cv2
 import numpy as np
 
@@ -18,7 +17,7 @@ def detectPneumonia(file):
   input_image = cv2.cvtColor(cv2.resize(ds.pixel_array,(256,256)), cv2.COLOR_BAYER_GR2RGB)
   X = []
   X.append(input_image)
-  X = preprocess_input(np.array(X))
+  X = np.array(X)
 
   output_classify, output_segment =  model.predict(X)
   
