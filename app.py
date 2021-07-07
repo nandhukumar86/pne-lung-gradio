@@ -21,7 +21,7 @@ def detectPneumonia(file):
 
   output_classify, output_segment =  model.predict(X)
   
-  output_segment = output_segment[0].reshape(64,64,3)
+  output_segment = output_segment[0].reshape(64,64,3).astype('int')
   output_classify = "Not Identified" if output_classify[0].argmax() == 1 else "Identified"
   
   imagedata = {
