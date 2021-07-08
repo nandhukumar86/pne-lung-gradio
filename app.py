@@ -18,7 +18,7 @@ def loss(y_true, y_pred):
 
 custom_objects = {"dice_coef": dice_coef}
 
-path = '/content/drive/MyDrive/CapstoneDataSet/modelPickle/model-dn.h5'
+path = 'model-dn.h5'
 model = tensorflow.keras.models.load_model(path, custom_objects=custom_objects)
 
 def detectPneumonia(file):
